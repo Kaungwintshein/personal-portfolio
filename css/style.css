@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
   --light-dark: #1e1e24;
+  --primary-dark: #040306;
+  --secondary-dark: #100e17;
+  --dark: #000;
+  --primary: #0bceaf;
+  --white: #fff;
 }
 html {
   scroll-behavior: smooth;
@@ -8,8 +13,10 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   color: white;
-  background-color: #100e17;
+  background-color: var(--secondary-dark);
 }
+
+/* Variables */
 .line-height-1 {
   line-height: 1em;
 }
@@ -28,6 +35,21 @@ body {
 .section-separator {
   padding: 100px 0px;
 }
+.animation-delay-1 {
+  animation-delay: 0.5s;
+}
+.animation-delay-2 {
+  animation-delay: 1s;
+}
+.animation-delay-3 {
+  animation-delay: 1.5s;
+}
+.animation-delay-4 {
+  animation-delay: 2s;
+}
+.animation-delay-5 {
+  animation-delay: 2.5s;
+}
 
 /* Navbar */
 .my-nav {
@@ -42,13 +64,14 @@ body {
   z-index: 2000;
 }
 .nav-link:hover {
-  color: #0bbba0 !important;
+  color: var(--primary) !important;
 }
 .nav-link.active {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--white);
 }
 .current-section {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--white);
+  color: var(--primary);
 }
 .navbar-scroll {
   background-color: var(--light-dark);
@@ -72,7 +95,7 @@ body {
 .my-badge {
   display: inline;
   font-size: 0.8em;
-  background-color: #0bceaf;
+  background-color: var(--primary);
   border-radius: 20px 20px 20px 0;
   padding: 10px 30px;
 }
@@ -80,7 +103,7 @@ body {
 }
 .profile img {
   padding: 15px;
-  border: 15px solid #040306;
+  border: 15px solid var(--primary-dark);
   border-radius: 50%;
 }
 .social a i {
@@ -88,8 +111,8 @@ body {
   transition: 0.5s;
 }
 .social a i:hover {
-  background-color: #fff;
-  color: #0bbba0;
+  background-color: var(--white);
+  color: var(--primary);
   border-radius: 3px;
   font-size: 18px;
 }
@@ -98,12 +121,12 @@ body {
 .about {
 }
 .about-language {
-  border: 1px solid #0bbba0;
+  border: 1px solid var(--primary);
   border-radius: 6px;
 }
 .my-card {
   background-color: var(--light-dark);
-  box-shadow: -1rem 0 3rem #000;
+  box-shadow: -1rem 0 3rem var(--dark);
 }
 
 /* Skills Section */
@@ -121,25 +144,24 @@ body {
   background-image: url("../img/map-color-overlay.png");
 }
 .icon {
-  border: 1px solid #0bbba0;
+  border: 1px solid var(--primary);
   border-radius: 50%;
   padding: 30px;
 }
 .form-control {
   background-color: transparent !important;
-  color: #fff !important;
+  color: var(--white) !important;
 }
 .form-control:focus {
   background-color: transparent !important;
-  color: #fff !important;
+  color: var(--white) !important;
 }
 .form-control::placeholder {
-  color: #fff !important;
+  color: var(--white) !important;
 }
-.submit-btn {
-}
+
 @media screen and (max-width: 576px) {
   .nav-link:hover {
-    color: #fff !important;
+    color: var(--white) !important;
   }
 }

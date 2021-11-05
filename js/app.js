@@ -1,3 +1,4 @@
+new WOW().init();
 $(".navbar-toggler").on("click", function () {
   let ariaExpend = $(this).attr("aria-expanded");
   if (ariaExpend == "false") {
